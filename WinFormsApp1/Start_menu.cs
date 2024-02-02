@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace WinFormsApp1
+﻿namespace WinFormsApp1
 {
     public partial class Start_menu : Form
     {
@@ -23,9 +13,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             InitializePanel();
-            calculatorForm = new Calculator();
-            calculatorForm.TopLevel = false;
-            panel1.Controls.Add(calculatorForm);
+
         }
         private void InitializeCalculatorForm()
         {
@@ -33,19 +21,32 @@ namespace WinFormsApp1
             calculatorForm.TopLevel = false;
             calculatorForm.FormBorderStyle = FormBorderStyle.None;
             calculatorForm.Dock = DockStyle.Fill;
+            calculatorForm.FormClosed += CalculatorForm_FormClosed;
             panel1.Controls.Add(calculatorForm);
         }
-
-        private void Calculator_Click(object sender, EventArgs e)
+        private void hideMenu()
         {
             CalculatorButton.Hide();
             converterButton.Hide();
+        }
+        private void showMenu()
+        {
+            CalculatorButton.Show();
+            converterButton.Show();
+        }
+        private void CalculatorForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            showMenu();
+        }
+        private void Calculator_Click(object sender, EventArgs e)
+        {
+            hideMenu();
             InitializeCalculatorForm();
             calculatorForm.Show();
 
         }
 
-       
+
     }
 
 

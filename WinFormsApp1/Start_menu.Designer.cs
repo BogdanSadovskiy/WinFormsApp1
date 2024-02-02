@@ -65,7 +65,7 @@
             Controls.Add(converterButton);
             Controls.Add(CalculatorButton);
             Name = "Start_menu";
-            Text = "Start_men";
+            Text = "Start_menu";
             ResumeLayout(false);
         }
 

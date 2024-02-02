@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinFormsApp1.Properties {
+namespace FirstApp.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WinFormsApp1.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WinFormsApp1.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FirstApp.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,26 @@ namespace WinFormsApp1.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_close_1828665 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-close-1828665", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_icons_button_close_angle_rectangle_logo_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-computer-icons-button-close-angle-rectangle-logo-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
