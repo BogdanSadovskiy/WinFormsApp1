@@ -1,8 +1,11 @@
-﻿namespace WinFormsApp1
+﻿using FirstApp;
+
+namespace WinFormsApp1
 {
     public partial class Start_menu : Form
     {
         private Calculator calculatorForm;
+        private Converter converterForm;
         private Panel panel1 = new Panel();
         private void InitializePanel()
         {
@@ -15,6 +18,18 @@
             InitializePanel();
 
         }
+        private void InitializeConverterForm()
+        {
+            converterForm = new Converter();
+            converterForm.TopLevel = false;
+            converterForm.FormBorderStyle = FormBorderStyle.None;
+            converterForm.Dock = DockStyle.Fill;
+            converterForm.FormClosed += ConverterForm_FormClosed;
+            panel1.Controls.Add(converterForm);
+        }
+
+     
+
         private void InitializeCalculatorForm()
         {
             calculatorForm = new Calculator();
@@ -36,6 +51,7 @@
         }
         private void CalculatorForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            panel1.Controls.Remove(calculatorForm);
             showMenu();
         }
         private void Calculator_Click(object sender, EventArgs e)
@@ -45,8 +61,17 @@
             calculatorForm.Show();
 
         }
-
-
+        private void ConverterForm_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            panel1.Controls.Remove(converterForm);
+            showMenu();
+        }
+        private void converterButton_Click(object sender, EventArgs e)
+        {
+            hideMenu() ;
+            InitializeConverterForm();
+            converterButton.Show();
+        }
     }
 
 

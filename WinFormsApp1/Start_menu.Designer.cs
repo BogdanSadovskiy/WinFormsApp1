@@ -35,6 +35,7 @@
             // CalculatorButton
             // 
             CalculatorButton.BackColor = Color.FromArgb(255, 128, 0);
+            CalculatorButton.Cursor = Cursors.Hand;
             CalculatorButton.FlatStyle = FlatStyle.Flat;
             CalculatorButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CalculatorButton.Location = new Point(318, 112);
@@ -48,6 +49,7 @@
             // converterButton
             // 
             converterButton.BackColor = Color.FromArgb(255, 128, 0);
+            converterButton.Cursor = Cursors.Hand;
             converterButton.FlatStyle = FlatStyle.Flat;
             converterButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             converterButton.Location = new Point(318, 195);
@@ -56,6 +58,7 @@
             converterButton.TabIndex = 1;
             converterButton.Text = "Converter";
             converterButton.UseVisualStyleBackColor = false;
+            converterButton.Click += converterButton_Click;
             // 
             // Start_menu
             // 

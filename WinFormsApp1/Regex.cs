@@ -13,6 +13,7 @@ namespace FirstApp
         private static string calculatorNumber = "^-?\\d*(\\.\\d*)?$";
         public static bool calculatorRegexNumber(string str)
         {
+            if (str == null) return false;
             regex = new Regex(calculatorNumber);
             return regex.IsMatch(str);
         }

@@ -76,6 +76,7 @@ namespace WinFormsApp1
             // plus
             // 
             plus.BackColor = Color.FromArgb(128, 128, 255);
+            plus.Cursor = Cursors.Hand;
             plus.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             plus.Location = new Point(285, 156);
             plus.Name = "plus";
@@ -88,6 +89,7 @@ namespace WinFormsApp1
             // minus
             // 
             minus.BackColor = Color.FromArgb(128, 128, 255);
+            minus.Cursor = Cursors.Hand;
             minus.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             minus.Location = new Point(341, 156);
             minus.Name = "minus";
@@ -100,6 +102,7 @@ namespace WinFormsApp1
             // multyple
             // 
             multyple.BackColor = Color.FromArgb(128, 128, 255);
+            multyple.Cursor = Cursors.Hand;
             multyple.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             multyple.Location = new Point(396, 156);
             multyple.Name = "multyple";
@@ -112,6 +115,7 @@ namespace WinFormsApp1
             // division
             // 
             division.BackColor = Color.FromArgb(128, 128, 255);
+            division.Cursor = Cursors.Hand;
             division.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             division.Location = new Point(451, 156);
             division.Name = "division";
@@ -170,7 +174,6 @@ namespace WinFormsApp1
             Controls.Add(plus);
             Controls.Add(secondNumber);
             Controls.Add(firstNumber);
-            Cursor = Cursors.Hand;
             Name = "Calculator";
             Text = "Calculator";
             ResumeLayout(false);
