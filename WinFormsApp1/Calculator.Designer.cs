@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace WinFormsApp1
 {
-    partial class Calculator
+    partial class NewCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -160,7 +160,7 @@ namespace WinFormsApp1
             xTip.ForeColor = Color.Black;
             xTip.ToolTipIcon = ToolTipIcon.Info;
             // 
-            // Calculator
+            // NewCalculator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -174,13 +174,13 @@ namespace WinFormsApp1
             Controls.Add(plus);
             Controls.Add(secondNumber);
             Controls.Add(firstNumber);
-            Name = "Calculator";
+            Name = "NewCalculator";
             Text = "Calculator";
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private bool isCharMinusAlone(string str)
+        public static bool isCharMinusAlone(string str)
         {
             return str == "-";
         }
@@ -300,7 +300,7 @@ namespace WinFormsApp1
 
         }
 
-        private string removeOneChar(string str)
+        public static string removeOneChar(string str)
         {
             string newString = "";
             for(int i = 0; i< str.Length-1; i++)

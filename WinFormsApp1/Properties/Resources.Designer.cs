@@ -63,6 +63,26 @@ namespace FirstApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2663482_200 {
+            get {
+                object obj = ResourceManager.GetObject("2663482-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2673030_200 {
+            get {
+                object obj = ResourceManager.GetObject("2673030-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_close_1828665 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-close-1828665", resourceCulture);

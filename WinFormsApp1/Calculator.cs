@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Calculator : Form
+    public partial class NewCalculator : Form
     {
 
-        public Calculator()
+        public NewCalculator()
         {
             InitializeComponent();
             InitializeComponentInput();

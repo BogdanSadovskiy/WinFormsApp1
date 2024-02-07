@@ -4,7 +4,7 @@ namespace WinFormsApp1
 {
     public partial class Start_menu : Form
     {
-        private Calculator calculatorForm;
+        private NewCalculator calculatorForm;
         private Converter converterForm;
         private Panel panel1 = new Panel();
         private void InitializePanel()
@@ -32,7 +32,7 @@ namespace WinFormsApp1
 
         private void InitializeCalculatorForm()
         {
-            calculatorForm = new Calculator();
+            calculatorForm = new NewCalculator();
             calculatorForm.TopLevel = false;
             calculatorForm.FormBorderStyle = FormBorderStyle.None;
             calculatorForm.Dock = DockStyle.Fill;
@@ -70,7 +70,7 @@ namespace WinFormsApp1
         {
             hideMenu() ;
             InitializeConverterForm();
-            converterButton.Show();
+            converterForm.Show();
         }
     }
 
