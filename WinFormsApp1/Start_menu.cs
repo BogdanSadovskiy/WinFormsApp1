@@ -6,6 +6,7 @@ namespace WinFormsApp1
     {
         private NewCalculator calculatorForm;
         private Converter converterForm;
+        private DictionaryApp dictionary;
         private Panel panel1 = new Panel();
         private void InitializePanel()
         {
@@ -28,7 +29,7 @@ namespace WinFormsApp1
             panel1.Controls.Add(converterForm);
         }
 
-     
+
 
         private void InitializeCalculatorForm()
         {
@@ -39,6 +40,22 @@ namespace WinFormsApp1
             calculatorForm.FormClosed += CalculatorForm_FormClosed;
             panel1.Controls.Add(calculatorForm);
         }
+        private void initializeDictionaryForm()
+        {
+            dictionary = new DictionaryApp();
+            dictionary.TopLevel = false;
+            dictionary.FormBorderStyle = FormBorderStyle.None;
+            dictionary.Dock = DockStyle.Fill;
+            dictionary.FormClosed += Dictionary_FormClosed;
+            panel1.Controls.Add(dictionary);
+        }
+
+        private void Dictionary_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            panel1.Controls.Remove(dictionary);
+            showMenu();
+        }
+
         private void hideMenu()
         {
             CalculatorButton.Hide();
@@ -68,9 +85,16 @@ namespace WinFormsApp1
         }
         private void converterButton_Click(object sender, EventArgs e)
         {
-            hideMenu() ;
+            hideMenu();
             InitializeConverterForm();
             converterForm.Show();
+        }
+
+        private void translatorButton_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+            initializeDictionaryForm();
+            dictionary.Show();  
         }
     }
 

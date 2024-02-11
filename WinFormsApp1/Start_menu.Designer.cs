@@ -30,6 +30,7 @@
         {
             CalculatorButton = new Button();
             converterButton = new Button();
+            translatorButton = new Button();
             SuspendLayout();
             // 
             // CalculatorButton
@@ -38,7 +39,7 @@
             CalculatorButton.Cursor = Cursors.Hand;
             CalculatorButton.FlatStyle = FlatStyle.Flat;
             CalculatorButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CalculatorButton.Location = new Point(318, 112);
+            CalculatorButton.Location = new Point(318, 83);
             CalculatorButton.Name = "CalculatorButton";
             CalculatorButton.Size = new Size(100, 40);
             CalculatorButton.TabIndex = 0;
@@ -52,7 +53,7 @@
             converterButton.Cursor = Cursors.Hand;
             converterButton.FlatStyle = FlatStyle.Flat;
             converterButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            converterButton.Location = new Point(318, 195);
+            converterButton.Location = new Point(318, 165);
             converterButton.Name = "converterButton";
             converterButton.Size = new Size(100, 40);
             converterButton.TabIndex = 1;
@@ -60,11 +61,26 @@
             converterButton.UseVisualStyleBackColor = false;
             converterButton.Click += converterButton_Click;
             // 
+            // translatorButton
+            // 
+            translatorButton.BackColor = Color.FromArgb(255, 128, 0);
+            translatorButton.Cursor = Cursors.Hand;
+            translatorButton.FlatStyle = FlatStyle.Flat;
+            translatorButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            translatorButton.Location = new Point(318, 256);
+            translatorButton.Name = "translatorButton";
+            translatorButton.Size = new Size(100, 40);
+            translatorButton.TabIndex = 2;
+            translatorButton.Text = "Translator";
+            translatorButton.UseVisualStyleBackColor = false;
+            translatorButton.Click += translatorButton_Click;
+            // 
             // Start_menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(translatorButton);
             Controls.Add(converterButton);
             Controls.Add(CalculatorButton);
             Name = "Start_menu";
@@ -76,5 +92,6 @@
 
         private Button CalculatorButton;
         private Button converterButton;
+        private Button translatorButton;
     }
 }
